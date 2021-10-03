@@ -22,7 +22,7 @@ import ray
 from sklearn.metrics import mean_absolute_percentage_error
 
 def main():
-    max_num_epoch = 64
+    max_num_epoch = 10
     search_space = {
             # You can mix constants with search space objects.
             "num_train_epochs": flaml.tune.loguniform(1, max_num_epoch),
@@ -40,7 +40,7 @@ def main():
     
     # constraints
     num_samples = -1    # number of trials, -1 means unlimited
-    time_budget_s = 120    # time budget in seconds
+    time_budget_s = 360    # time budget in seconds
     
     start_time = time.time()
     ray.shutdown()
