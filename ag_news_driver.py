@@ -43,7 +43,7 @@ def main():
     
     from transformers import AutoModelForSequenceClassification
     
-    NUM_LABELS = 3
+    NUM_LABELS = 4
     model = AutoModelForSequenceClassification.from_pretrained(MODEL_CHECKPOINT, num_labels = NUM_LABELS)
     
     
